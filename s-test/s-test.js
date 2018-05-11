@@ -21,7 +21,7 @@ class STest extends PolymerElement {
         }
       </style>
       <div class="container">
-        <h2>[[greeting]]</h2>
+        <h2>[[_greeting]]</h2>
       </div>
     `;
   }
@@ -31,6 +31,10 @@ class STest extends PolymerElement {
         type: String,
         value: '',
         observer: '_doUsername'
+      },
+      greeting: {
+        type: String,
+        value: 'Salut'
       },
     };
   }
@@ -42,19 +46,19 @@ class STest extends PolymerElement {
   _doUsername() {
     // Init
     var username = this.get('username'); 
+    var greeting = this.get('greeting'); 
 
     // Begrüssungstext festlegen
-    var greeting = 'Hoi' ;
     if (username !== '') {
       greeting = greeting + ', ' + username;  
     };
     greeting = greeting + '!';
 
     // Variable - SET
-    this.set('greeting', greeting);
+    this.set('_greeting', greeting);
      
     // Prüfen
-    console.log('_doUsername', this.greeting);
+    // console.log('_doUsername', this.greeting);
   }
 
 }
