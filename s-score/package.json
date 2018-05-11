@@ -1,0 +1,13 @@
+{
+  "name": "s-score",
+  "description": "Zeigt den Notendurschnitt und Pluspunkte dar.",
+  "main": "s-score.js",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.12",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}
