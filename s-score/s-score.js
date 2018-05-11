@@ -147,6 +147,7 @@ class SScore extends PolymerElement {
   // ---------------------------------------------------------
   // Functions
   // ---------------------------------------------------------
+  
   _doNote() {
     // Init
     var note = this.get('note');  
